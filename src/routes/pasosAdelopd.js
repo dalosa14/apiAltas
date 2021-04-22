@@ -191,7 +191,7 @@ router.get('/paso8',async (req, res) =>{
     try {
         const paso8 = await AdelopdForm.update({paso8: JSON.stringify(req.body.data)},{where: {token:req.body.token,id:req.body.id}})
         res.json({success:true,data:paso8})
-    } catch (error) {
+    } catch (error) { 
         console.log(error)
         res.json({success:false,data:error})
 
