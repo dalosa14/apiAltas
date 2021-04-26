@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(express.json())
 app.use(express.urlencoded({ extended:false }))
 app.use(cors({
-    origin:'http://localhost:8080'
+    origin:['https://api.infocursos.es','https://pruebas.infocursos.es ']
 }))
 app.use(helmet());
 app.use('/adelopd',pasosAdelopd)
