@@ -1,9 +1,11 @@
+require('dotenv').config()
 const express = require("express");
 const helmet = require("helmet");
 const sequelize = require("./dbs/dbConnect");
 const app = express();
 const pasosAdelopd = require('./routes/pasosAdelopd')
 const cors = require('cors');
+
 app.use(express.json())
 app.use(express.urlencoded({ extended:false }))
 app.use(cors({
